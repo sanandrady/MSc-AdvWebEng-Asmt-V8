@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>PATeRefApp</title>
-    <meta name="description" content="Patient eReferral MEAN Stack App ">
+    <title></title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -12,41 +12,16 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- endbuild -->
-</head>
-<body ng-app="pateRefAppV8App">
+  </head>
+  <body ng-app="updateApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!-- application content -->
 
-    <div class="row">
-    <div class="col-md-12">
-        <nav class="navbar-inverse navbar-fixed-top">
-            <div class="navbar-text">
-                <img alt="[MEAN]JS" src="images/logo-mean.png" height="50" width="50">
-            </div>
-            <div class="navbar-text col-md-7">
-                <h3>Patient eReferral MEAN Stack App</h3>
-            </div>
-            <div class="navbar-text navbar-right col-md-2">
-                Signed in as <a href="#">{{User}}</a>
-            </div>
-        </nav>
-    </div>
-        </div>
-
-
-
-    <!--<div class="navbar navbar-default" role="navigation">
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
 
@@ -57,8 +32,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">PATeRefApp-v8</a>
-              <img src="images/logo-mean.png" />
+            <a class="navbar-brand" href="#/">update</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -71,64 +45,48 @@
           </div>
         </div>
       </div>
-    </div>-->
+    </div>
 
-    
-        <!--<div class="container" style="margin-top:8em">-->
-            <div ng-view=""></div>
-            <!--</div>-->
-        
-    
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <footer>
-                    <nav class="navbar-inverse navbar-fixed-bottom">
-                        <div class="navbar-text navbar-left">
-                            <p><span class="glyphicon glyphicon-copyright-mark"></span> $anandR@dy Inc.</p>
-                        </div>
-                    </nav>
-                </footer>
-                </div>
-            </div>
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
 
 
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-            <script>
-                !function (A, n, g, u, l, a, r) {
-                    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-                        (A[l].q = A[l].q || []).push(arguments)
-                    }, A[l].l = +new Date, a = n.createElement(g),
-                    r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-                }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
 
-                ga('create', 'UA-XXXXX-X');
-                ga('send', 'pageview');
-            </script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-            <!-- build:js(.) scripts/vendor.js -->
-            <!-- bower:js -->
-            <script src="bower_components/jquery/dist/jquery.js"></script>
-            <script src="bower_components/angular/angular.js"></script>
-            <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="bower_components/angular-animate/angular-animate.js"></script>
-            <script src="bower_components/angular-aria/angular-aria.js"></script>
-            <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-            <script src="bower_components/angular-messages/angular-messages.js"></script>
-            <script src="bower_components/angular-resource/angular-resource.js"></script>
-            <script src="bower_components/angular-route/angular-route.js"></script>
-            <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-            <script src="bower_components/angular-touch/angular-touch.js"></script>
-            <!-- endbower -->
-            <!-- endbuild -->
-            <!-- build:js({.tmp,app}) scripts/scripts.js -->
-            <script src="scripts/app.js"></script>
-            <script src="scripts/controllers/main.js"></script>
-            <script src="scripts/controllers/about.js"></script>
-            <!-- endbuild -->
-
-
-
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
