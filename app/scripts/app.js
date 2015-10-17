@@ -29,11 +29,7 @@ angular
       .when('/joinin', {
         templateUrl: 'views/joinin.html',
         controller: 'JoinCtrl'
-      })        
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
+      })         
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
