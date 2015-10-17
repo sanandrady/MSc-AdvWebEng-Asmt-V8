@@ -1,7 +1,9 @@
 {
   "name": "update",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "karma": "^0.13.11"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",
