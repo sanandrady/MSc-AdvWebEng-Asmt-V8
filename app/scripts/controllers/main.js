@@ -9,9 +9,12 @@
  */
 angular.module('pateRefAppV8App')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
+    $scope.things = [
+      'NodeJS',
       'AngularJS',
+      'ExpressJS',
+      'MongoDB',
+      'HTML5 Boilerplate',
       'Karma'
     ];
   });
