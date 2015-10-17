@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name pateRefAppV8App.controller:AboutCtrl
+ * @name updateApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the pateRefAppV8App
+ * Controller of the updateApp
  */
-angular.module('pateRefAppV8App')
+angular.module('updateApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
