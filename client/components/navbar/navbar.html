@@ -1,20 +1,18 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">meanapp-v8</a>
+
+<div class="container" ng-controller="NavbarCtrl">
+<div class="row">
+    <div class="col-md-12">
+        <nav class="navbar-inverse navbar-fixed-top">
+            <div class="navbar-text">
+                <img alt="[MEAN]JS" src="assets/images/logo-mean.png" height="50" width="50">
+            </div>
+            <div class="navbar-text col-md-7">
+                <h3>Patient eReferral MEAN Stack App</h3>
+            </div>
+            <div class="navbar-text navbar-right col-md-2">
+                Signed in as <a href="#">{{User}}</a>
+            </div>
+        </nav>
     </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>
+    </div>
