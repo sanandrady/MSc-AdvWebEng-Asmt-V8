@@ -1,7 +1,9 @@
-<div class="container" style="margin-top:8em">
+<div class="container" style="margin-top:8em" ng-controller="JoininCtrl">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3>Join In</h3>
+            <h5 style="color:red">{{alert}}</h5>
+            <h6>{{alert1}}</h6>
         </div>
         <div class="panel-body">
             <!--<div class="container">-->
@@ -13,63 +15,68 @@
             <p class="form-group col-md-12">
             <p class="col-md-6">
                 First Name:
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" ng-model="newPmi.firstname"/>
             </p>
             <p class="col-md-6">
                 Last Name:
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" ng-model="newPmi.lastname"/>
             </p>
             <p class="col-md-6">
                 Date of Birth:
-                <input type="date" class="form-control" />
+                <input type="text" class="form-control" ng-model="newPmi.dob"/>
             </p>
             <p class="col-md-6">
-                Username:
-                <input type="text" class="form-control" required />
+                <b>*Username:</b>
+                <input type="text" class="form-control" ng-model="newPmi.username" id="uname" />
             </p>
             <p class="col-md-6">
-                Password:
-                <input type="password" class="form-control" required />
+                <b>*Password:</b>
+                <input type="password" class="form-control" ng-model="newPmi.password" id="pwd" />
             </p>
             <!--<p class="col-md-6">Re-type Password:
             <input type="password" class="form-control" required/><br /></p>-->
             <p class="col-md-6">
-                <button class="btn-lg btn-default col-md-6 col-md-offset-3" ng-click="addUser()">Submit</button>
+                <button class="btn-lg btn-default col-md-6 col-md-offset-3" ng-click="addPmi()">Submit</button>
             </p><br />
             <p class="row"><p class="row col-md-12"><a class="btn-lg btn-danger" href="/">Cancel</a></p></p>
 
         </div>
     </div>
 
-    <div class="container" ng-controller="JoininCtrl">
-        <h1>Join In test {{message}}</h1>
+    <div class="container">
+        <h1>{{message}}</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th>Fname</th>
                     <th>Lname</th>
                     <th>DOB</th>
+                    <th>Email</th>
                     <th>Uname</th>
                     <th>Pwd</th>
                 </tr>
             </thead>
 
             <tbody>
-                <!--<tr>
-                    <td><input class="form-control" ng-model="pmi.name"></td>
-                    <td><input class="form-control" ng-model="pmi.email"></td>
-                    <td><input class="form-control" ng-model="pmi.number"></td>
-                    <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
+                <tr>
+                    <td><input class="form-control" ng-model="newPmi.firstname"></td>
+                    <td><input class="form-control" ng-model="newPmi.lastname"></td>
+                    <td><input class="form-control" ng-model="newPmi.dob"></td>
+                    <td><input class="form-control" ng-model="newPmi.email"></td>
+                    <td><input class="form-control" ng-model="newPmi.username"></td>
+                    <td><input class="form-control" ng-model="newPmi.password"></td>
+                    <td><button class="btn btn-primary" ng-click="addPmi()">Add Contact</button></td>
                     <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
-                </tr>-->
-                <tr ng-repeat="user in pmi">
-                    <td>{{user.fname}}</td>
-                    <td>{{user.lname}}</td>
-                    <td>{{user.dob}}</td>
-                    <td>{{user.uname}}</td>
-                    <td>{{user.pwd}}</td>
-                    <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
-                    <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+                </tr>
+                <tr ng-repeat="pmi in pmilist">
+                    <td>{{pmi.firstname}}</td>
+                    <td>{{pmi.lastname}}</td>
+                    <td>{{pmi.dob}}</td>
+                    <td>{{pmi.email}}</td>
+                    <td>{{pmi.username}}</td>
+                    <td>{{pmi.password}}</td>
+                    <td><button class="btn btn-danger" ng-click="deletePmi(pmi._id)">Remove</button></td>
+                    <td><button class="btn btn-warning" ng-click="editPmi(pmi)">Edit</button></td>
                 </tr>
             </tbody>
 
