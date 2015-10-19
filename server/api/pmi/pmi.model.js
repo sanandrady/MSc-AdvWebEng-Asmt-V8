@@ -7,6 +7,8 @@ var PmiSchema = new Schema({
     firstname: String,
     lastname: String,
     dob: String,
+    //username: String,
+    //password: String,
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     email: String
